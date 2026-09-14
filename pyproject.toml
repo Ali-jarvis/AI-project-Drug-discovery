@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlvs"
+version = "1.0.0"
+description = "MLvs: machine learning based virtual screening with a selectable model set"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Shahid Ali", email = "ali.ali.md111@gmail.com" }]
+keywords = [
+    "virtual screening",
+    "drug discovery",
+    "cheminformatics",
+    "machine learning",
+    "deep learning",
+    "QSAR",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+dependencies = [
+    "numpy>=1.23",
+    "pandas>=1.5",
+    "scikit-learn>=1.2",
+    "imbalanced-learn>=0.10",
+    "rdkit>=2022.9",
+    "matplotlib>=3.6",
+    "joblib>=1.2",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+chembl = ["chembl-webresource-client>=0.10"]
+boosting = ["xgboost>=1.7", "lightgbm>=3.3"]
+deep = ["torch>=2.0"]
+dev = ["pytest>=7.0", "pytest-cov>=4.0"]
+all = [
+    "chembl-webresource-client>=0.10",
+    "xgboost>=1.7",
+    "lightgbm>=3.3",
+    "torch>=2.0",
+]
+
+[project.scripts]
+mlvs = "mlvs.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Ali-jarvis/AI-project-Drug-discovery"
+Paper = "https://doi.org/10.3390/ijms27125536"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

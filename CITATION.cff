@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+message: "If you use MLvs in published work, please cite the paper below."
+title: "MLvs: machine learning based virtual screening"
+abstract: >-
+  Ligand-based virtual screening toolkit in which the classifier set, molecular
+  representation, and consensus method are all user-selectable. Trains any
+  combination of classical, ensemble, and deep learning models under a common
+  cross-validation protocol, compares them, and ranks a compound library by
+  their consensus. Developed for the DPP-4 natural product screen reported in
+  Ali et al., Int. J. Mol. Sci. 2026.
+type: software
+license: MIT
+version: 1.0.0
+repository-code: "https://github.com/Ali-jarvis/AI-project-Drug-discovery"
+authors:
+  - family-names: Ali
+    given-names: Shahid
+    email: ali.ali.md111@gmail.com
+    orcid: "https://orcid.org/0000-0002-4724-5086"
+keywords:
+  - virtual screening
+  - machine learning
+  - deep learning
+  - cheminformatics
+  - QSAR
+  - drug discovery
+  - dipeptidyl peptidase-4
+preferred-citation:
+  type: article
+  title: >-
+    Ensemble Machine Learning- and Deep Learning-Driven Identification and
+    Validation of Sennidin B as a Novel Dipeptidyl Peptidase-4 Inhibitor
+  authors:
+    - family-names: Ali
+      given-names: Shahid
+      orcid: "https://orcid.org/0000-0002-4724-5086"
+    - family-names: Shaikh
+      given-names: Sibhghatulla
+    - family-names: Lim
+      given-names: "Jeong Ho"
+    - family-names: Lee
+      given-names: "Eun Ju"
+    - family-names: Choi
+      given-names: Inho
+  journal: "International Journal of Molecular Sciences"
+  volume: 27
+  issue: 12
+  start: 5536
+  year: 2026
+  month: 6
+  doi: "10.3390/ijms27125536"
+  publisher:
+    name: MDPI
+references:
+  - type: article
+    title: >-
+      Target-driven machine learning-enabled virtual screening (TAME-VS)
+      platform for early-stage hit identification
+    authors:
+      - family-names: Bian
+        given-names: Yuemin
+      - family-names: Kwon
+        given-names: "Jason J."
+      - family-names: Liu
+        given-names: Chao
+      - family-names: Margiotta
+        given-names: Enrico
+      - family-names: Shekhar
+        given-names: Mrinal
+      - family-names: Gould
+        given-names: "Alexandra E."
+    journal: "Frontiers in Molecular Biosciences"
+    volume: 10
+    start: 1163536
+    year: 2023
+    doi: "10.3389/fmolb.2023.1163536"
+    notes: "Prior work establishing the modular target-to-hits screening structure."
