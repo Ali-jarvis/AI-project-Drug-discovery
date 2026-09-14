@@ -54,6 +54,31 @@ preferred-citation:
 references:
   - type: article
     title: >-
+      Identification of active compounds as novel dipeptidyl peptidase-4
+      inhibitors through machine learning and structure-based molecular
+      docking simulations
+    authors:
+      - family-names: Ali
+        given-names: Shahid
+        orcid: "https://orcid.org/0000-0002-4724-5086"
+      - family-names: Shaikh
+        given-names: Sibhghatulla
+      - family-names: Ahmad
+        given-names: Khurshid
+      - family-names: Choi
+        given-names: Inho
+    journal: "Journal of Biomolecular Structure and Dynamics"
+    volume: 43
+    issue: 4
+    start: 1611
+    end: 1620
+    year: 2025
+    doi: "10.1080/07391102.2023.2292299"
+    publisher:
+      name: "Taylor & Francis"
+    notes: "Earlier DPP-4 machine learning and docking study this work builds on."
+  - type: article
+    title: >-
       Target-driven machine learning-enabled virtual screening (TAME-VS)
       platform for early-stage hit identification
     authors:

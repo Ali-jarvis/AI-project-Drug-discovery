@@ -249,6 +249,33 @@ If this software contributes to work you publish, please cite:
 
 Figures 1 and 2 in this README are reproduced from that article, which is open access under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
+### Earlier work on this target
+
+The DPP-4 screening strategy implemented here was first developed in:
+
+> Ali, S.; Shaikh, S.; Ahmad, K.; Choi, I. Identification of active compounds as novel dipeptidyl peptidase-4 inhibitors through machine learning and structure-based molecular docking simulations. *J. Biomol. Struct. Dyn.* **2025**, *43*(4), 1611-1620. https://doi.org/10.1080/07391102.2023.2292299
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@article{ali2025dpp4ml,
+  title   = {Identification of active compounds as novel dipeptidyl peptidase-4
+             inhibitors through machine learning and structure-based molecular
+             docking simulations},
+  author  = {Ali, Shahid and Shaikh, Sibhghatulla and Ahmad, Khurshid
+             and Choi, Inho},
+  journal = {Journal of Biomolecular Structure and Dynamics},
+  volume  = {43},
+  number  = {4},
+  pages   = {1611--1620},
+  year    = {2025},
+  doi     = {10.1080/07391102.2023.2292299},
+  publisher = {Taylor \& Francis}
+}
+```
+</details>
+
 ---
 
 ## Related work
