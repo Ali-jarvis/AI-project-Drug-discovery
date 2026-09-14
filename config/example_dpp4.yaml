@@ -1,0 +1,42 @@
+# Example configuration reproducing the DPP-4 screening setup.
+#
+# Run with:  mlvs run -c config/example_dpp4.yaml
+# List every selectable model and featuriser:  mlvs models
+
+project: dpp4
+outdir: results
+theme: light          # light | dark — applies to the generated figures
+
+target:
+  uniprot_id: P27487  # DPP-4 (dipeptidyl peptidase-4)
+  chembl_id: null     # set this to skip the UniProt lookup
+  activity_type: IC50
+  units: nM
+  threshold: 1000.0   # IC50 < 1000 nM counts as active
+  ambiguous_margin: 0.0   # e.g. 0.5 discards compounds within 2x of the cutoff
+
+features:
+  method: morgan      # morgan | atom_pair | topological_torsion | rdkit | maccs |
+                      # descriptors | morgan+descriptors
+  n_bits: 1024
+  radius: 2
+
+training:
+  # Pick any combination. Shortcuts: all, classical, ensemble, deep
+  models: [rf, svm, lr, mlp]
+  cv_folds: 10
+  balance: undersample   # undersample | oversample | none
+  grid_search: true
+  scoring: roc_auc
+  n_jobs: -1
+
+screening:
+  library: data/natural_products.csv
+  smiles_col: smiles
+  id_col: compound_id
+  consensus: mean_rank   # mean_rank | median_rank | mean_score | rank_product | borda
+  weight_by_auc: false   # weight each model's vote by its cross-validated AUC
+  top_fraction: 0.01
+  top_n: null            # set to take a fixed count instead of a fraction
+  include_per_model_top: true
+  batch_size: 50000
